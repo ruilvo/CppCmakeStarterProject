@@ -34,7 +34,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # database.
 if((${CMAKE_GENERATOR} MATCHES "Make") OR (${CMAKE_GENERATOR} MATCHES "Ninja$"))
   add_custom_target(
-    "ccsp_sdr-ccc" ALL
+    "ccsp-ccc" ALL
     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_BINARY_DIR}/compile_commands.json
             ${CMAKE_SOURCE_DIR}
     DEPENDS ${CMAKE_BINARY_DIR}/compile_commands.json
